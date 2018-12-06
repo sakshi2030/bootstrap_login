@@ -1,0 +1,71 @@
+<html>
+  <head>
+  <title>Welcome To Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  function registerform()
+  {
+  var name=document.myform.name.value;
+  var password=document.myform.password.value;
+
+  if (name==null || name==""){
+    alert("Name can't be blank");
+    return false;
+  }else if(password.length<6){
+    alert("Password must be at least 6 characters long.");
+    return false;
+    }
+  }
+  </script>
+
+
+
+  <style>
+body {font-family: Arial, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+</style>
+</head>
+
+	<body>
+<form name='registration' onSubmit="return registerform();">
+  <td align="right">Enter Name :</td><br>
+	<td><input type="text" placeholder="Enter name here" size= "50" required /></td><br>
+	<td align="right">Enter Email ID :</td><br>
+	<td><input type="text" placeholder="Enter Email ID here" size="15" required /></td><br>
+	<td align="right">Enter Username :</td><br>
+	<td><input type="text" placeholder="Enter Username here" size="50"  required/></td><br>
+	<td align="right">Enter Password :</td><br>
+	<td><input type="password" placeholder="Enter Password here" size="20"required /></td><br>
+	<td align="right">Enter Confirm Password :</td><br>
+	<td><input type="password" placeholder="Enter Confirm Password here" size="20" required/></td><br>
+	<td align="right">Enter Address :</td><br>
+  <td><input type="text" placeholder="Enter Address here" size="50" required/></td><br>
+  <td align="right">Phone number :</td>
+  <td><input type="tel" placeholder="Enter Phone number here" size="10" required/></td>
+  <td><br>
+
+  <button type="submit">Create Account</button>
+<input type="button" value="Login" onClick="window.location = 'login.html':">
+	</body>
+	</html>
